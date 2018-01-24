@@ -150,6 +150,8 @@ javascript—DOM基础
                 
                 ownerDocument          获取该节点的文档根节点,相当于document;
                 
+                hasChildNodes           检查元素是否有子节点：(有子节点返回true，没有返回 false)
+                
                 parentNode             获取当前节点的父节点;
                 
                 previousSibling        获取当前节点的前一个同级节点;
