@@ -229,14 +229,15 @@ javascript—DOM基础
                   
                   createTextNode()    创建一个文件节点;
                   
-                  insertBefore()      将新节点插入在前面;
+                  insertBefore()      可以把节点添加到指定节点的前面(前后都可以
                   
-                  replaceChild()      将新节点替换旧节点;
+                  replaceChild()      方法可将某个子节点替换为另一个
                   
                   cloneNode()         复制节点;
                   
                   removeChild()       移除节点;   
                   
+                  normalize()        合并相邻的 Text 节点并删除空的 Text 节点。
          
         (1).write()方法
             // write()方法可以把任意字符串插入到文档中去;
@@ -280,6 +281,28 @@ javascript—DOM基础
                                  <li>Water</li>
                                  <li>Tea</li>
                                  </ul>
+                                 
+           
+          (6) replaceChild() 方法可将某个子节点替换为另一个。
+
+                   如替换成功，此方法可返回被替换的节点，如替换失败，则返回 NULL。。
+                   
+           
+                        <ul id="myList"><li>Coffee</li><li>Tea</li><li>Milk</li></ul>
+                        <button onclick="myFunction()">试一下</button>
+
+                        function myFunction()
+                          {
+                             创建新文本
+                         var textnode=document.createTextNode("Water");
+                                  // 找到第一个 li 
+                         var item=document.getElementById("myList").childNodes[0]; 
+                               把以前li的第一个子节点文本替换成 新创建的文本
+                         item.replaceChild(textnode,item.childNodes[0]);
+                
+                         }    
+                         
+                         
 
         (7).cloneNode()方法
 
@@ -319,3 +342,44 @@ javascript—DOM基础
                      删除在box父元素里面的box元素删除 (box的父元素就是body)
                      box.parentNode.removeChild(box)     
                         
+
+             (9)  normalize()    合并相邻的 Text 节点并删除空的 Text 节点。
+                
+                        <p id="demo">点击添加按钮，给该p元素添加文本，点击正规化按钮使该p元素正规化</p>
+
+                        <button onclick="addTextNode()">添加</button>
+
+                        <button onclick="normPara()">正规化</button>
+
+                        <p>以上文本中有<span id="myS">1</span>个子节点</p>
+
+                        <p id="demo"></p>   
+
+                        function addTextNode() {
+
+                            var x = document.createTextNode("添加了文本.");
+
+                            var y = document.getElementById("demo");
+
+                            y.appendChild(x);
+
+                            var x = document.getElementById("myS");
+
+                            x.innerHTML = y.childNodes.length;
+
+                        }
+
+                        function normPara() {
+
+                            var x = document.getElementById("demo");  
+
+                            x.normalize();
+
+                            var y = document.getElementById("myS");
+
+                            y.innerHTML = x.childNodes.length;
+
+
+                        }
+
+
