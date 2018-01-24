@@ -383,3 +383,29 @@ javascript—DOM基础
                         }
 
 
+  取得特性
+
+              getAttribute() 
+  
+                        <div id="myDiv" class="myClass" title="myTitle"></div>
+
+                          var div=document.getElementById("myDiv");
+                          console.log(div.getAttribute("id"))   myDiv
+                          console.log(div.getAttribute("class"))  myClass
+                          console.log(div.getAttribute("title"))  myTitle
+
+设置特性
+             
+                 setAttribute(n1,n2)
+             
+                       var div=document.getElementById("myDiv");
+                         console.log(div.setAttribute("id","myid")) 
+                         console.log(div.getAttribute("class","myclass"))
+                         console.log(div.getAttribute("title","mytitle"))
+
+删除特性  
+        
+            removeAttribute（）
+                     
+                   div.removeAttribute("id")
+
