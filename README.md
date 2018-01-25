@@ -27,6 +27,12 @@ javascript—DOM基础
         setAttribute()                设置特定元素节点属性的值;
         removeAttribute()             移除特定元素节点属性;   
         
+        	document.querySelector("#idv")
+	document.querySelector(".class")
+	document.querySelector("div")
+            
+            getElementsByTagName()等价于下面这个
+          document.getElementsByTagName("div");
         
         1.getElementById()
 
