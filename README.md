@@ -26,8 +26,11 @@ javascript—DOM基础
         getAttribute()                获取特定元素节点属性的值;
         setAttribute()                设置特定元素节点属性的值;
         removeAttribute()             移除特定元素节点属性;   
-        
-        	document.querySelector("#idv")
+	
+	getElementsByClassName()  获取相同类名的节点
+	
+	
+  	document.querySelector("#idv")
 	document.querySelector(".class")
 	document.querySelector("div")
             
@@ -414,4 +417,75 @@ javascript—DOM基础
             removeAttribute（）
                      
                    div.removeAttribute("id")
+
+
+classList 属性
+ 
+           在操作类名时，需要通过className属性添加，删除，替换，因为className中是一个字符串，
+	   所以即使只修改字符串一部分，也必须每次都设置整个字符串的值
+	   
+	     如下：例子  删除类中 ki
+	     
+	     
+	     
+                          <div  id="div" class="is ki opp"></div>
+		     		          		     
+		           var text=document.getElementById("div")
+		            
+			    首先，取到类名 把这三个类拆分成数组
+		            var classns=text.className.split(/\s+/);
+		            var pos=-1;
+		            for(var i=0;i< classns.length;i++){
+		            if(classns[i]=="ki"){
+		                删除类名(ki)
+		                classns.splice(i,1);
+		            	break;
+     	
+		            }
+		          }    
+			 
+			  把剩下的类名拼成字符串，并重新设置
+		           text.className=classns.join(" ");
+		           console.log(text.className)     输出    is opp 
+			   
+			   
+			   
+	     HTML5新增了一个操作类的方法，className()
+	     
+	          这个新类型 还定义了如下方法
+	       
+	            add(value)   将给定的字符串值添加到列表中,如果值存在,就不添加了
+	            contains(value)  表示列表中是否设置值, 如果存在返回true,否则返回false 
+		    remove(value)    从列表中删除给定的字符串
+		    toggle(value) 如果列表中已经存在给定的值,删除它,如果列表中没有给定值,添加它
+		    
+		    
+		    
+		    add(value)   将给定的字符串值添加到列表中,如果值存在,就不添加了
+		       添加“div”类
+		       div.classList.add("div")
+		     		     
+		    contains(value)  表示列表中是否设置值, 如果存在返回true,否则返回false 
+		         确定元素中是否包含既定的类名
+			 if(div.classList.contains("bd")&& !div.classList.contains("disd")){
+				//执行操作
+			  }
+		    
+		    remove(value)    从列表中删除给定的字符串
+		       删除“div”类
+		       div.classList. remove("div")
+		    
+		    toggle(value) 如果列表中已经存在给定的值,删除它,如果列表中没有给定值,添加它
+		        切换“div”类
+	               div.classList. toggle("div")
+	     
+	     注意支持 classList的属性浏览器 有 Firefox3.6+和 Chrome
+	     
+	     
+ 
+ 
+ 
+ 
+ 
+ 
 
