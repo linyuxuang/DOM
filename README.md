@@ -105,8 +105,9 @@ javascript—DOM基础
            // PS:对于并不是HTML合法的属性,那么在JS获取的兼容性上也会存在差异;
            // IE支持合法的name属性,但对于自定义的属性会出现不兼容问题;
     
-    
-   4.getAttribute()
+   
+   
+    4.getAttribute()
    
      方法将获取元素中某个属性值;
      但它和直接使用".attr"获取属性值的方法有一定区别;
@@ -488,7 +489,80 @@ classList 属性
 	     
  
  
- 
+ 焦点管理
+    
+          focus()  主要是用于获取焦点，说白了，就是自动把光标放到此组件上面，无须用户再次操作
+       
+           document.hasFocus() 是否得到焦点，如果得到焦点 返回 true, 没有焦点 返回fasle
+	  
+                     var text= document.querySelector("#inpt");
+		        text.focus()
+		          if( document.hasFocus()){
+		          	console.log("得到焦点");
+		             }else{
+		          	console.log("没有焦点");
+		          }
+       
+                       输出   得到焦点 
+                             
+       
+       
+       
+    readyState：属性  (他一般实现一个指示文档已经加载完成的指示器)
+	    
+	    
+		   下面是它的两个可能值	      
+		     loading  正在加载
+		     complete  已经加载完成
+		     
+		       if(document.readyState=="loading"){
+		       	alert("正在加载。。。。。");
+		       }else if(document.readyState=="complete"){
+		       	 alert("加载完成。。。。。")
+		       }
+       
+       
+       
+    兼容模式
+    
+        
+           IE给document添加了一个名为compatMode的属性,这个属性告诉开发人员浏览器采用了那种渲染模式,
+	  
+	        1: 在标准模式下 document.compatMode的值等于 "CSSlCompat"
+	        2:在混乱模式下  document.compatMode 的值等于 "BackCompat"
+	  
+
+		      if(document.compatMode=="CSSlCompat"){
+			 alert("我是标准模式的浏览器");
+		      }else if(document.compatMode=="BackCompat"){
+			  alert("我是混乱模式的浏览器");
+		      }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
  
  
  
