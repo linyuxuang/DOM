@@ -34,8 +34,8 @@ javascript—DOM基础
 	document.querySelector(".class")
 	document.querySelector("div")
             
-            getElementsByTagName()等价于下面这个
-          document.getElementsByTagName("div");
+                  getElementsByTagName()等价于下面这个
+          	  document.querySelectorAll()("div");
         
         1.getElementById()
 
@@ -414,17 +414,21 @@ javascript—DOM基础
 
 删除特性  
         
-            removeAttribute（）
+                    removeAttribute（）
                      
-                   div.removeAttribute("id")
+                             div.removeAttribute("id")
+			     
+			     
 
 
 classList 属性
+
+
  
-           在操作类名时，需要通过className属性添加，删除，替换，因为className中是一个字符串，
-	   所以即使只修改字符串一部分，也必须每次都设置整个字符串的值
-	   
-	     如下：例子  删除类中 ki
+		   在操作类名时，需要通过className属性添加，删除，替换，因为className中是一个字符串，
+		   所以即使只修改字符串一部分，也必须每次都设置整个字符串的值
+
+		     如下：例子  删除类中 ki
 	     
 	     
 	     
