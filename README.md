@@ -261,7 +261,7 @@ javascript—DOM基础
                                    
         
          (3).appendChild()方法
-              appendChild()方法将一个新节点添加到某个节点的子节点列表的末尾上;
+              appendChild()方法将一个新节点·	添加到某个节点的子节点列表的末尾上;
               var box = document.getElementById('box'); 
               var p = document.createElement('p'); // 创建一个新元素节点<p>;
               box.appendChild(p); // 把新元素节点<p>添加子节点末尾; 
@@ -490,7 +490,9 @@ classList 属性
  
  
  焦点管理
-    
+ 
+ 
+ 
           focus()  主要是用于获取焦点，说白了，就是自动把光标放到此组件上面，无须用户再次操作
        
            document.hasFocus() 是否得到焦点，如果得到焦点 返回 true, 没有焦点 返回fasle
