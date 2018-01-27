@@ -655,14 +655,30 @@ classList 属性
  
     
        
+      
+   contains() 方法
+   
+   
+		如果A元素包含B元素，则返回true，否则false。唯一不支持这个方法的是IE的死对头firefox。
+		不过火狐支持compareDocumentPosition() 方法,这是W3C制定的方法，标准浏览器都支持，
+		不过实用性性很差，它的使用形式与contains差不多，但返回的不是 一个布尔值，
+		而是一个很奇怪的数值 
+
        
+             例子
+       
+                  <div>
+		    <span></span>
+		 </div>
+                 <a></a> 
        
-       
-       
-       
-       
-       
-       
+              var  a=document.querySelector("a");
+              var  div=document.querySelector("div");
+              var span =document.querySelector("span");
+	      
+              console.log(a.contains(div))       //false
+	      
+              console.log(div.contains(span))   // true
        
        
        
