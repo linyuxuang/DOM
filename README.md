@@ -493,19 +493,20 @@ classList 属性
  
  
  
-          focus()  主要是用于获取焦点，说白了，就是自动把光标放到此组件上面，无须用户再次操作
-       
-           document.hasFocus() 是否得到焦点，如果得到焦点 返回 true, 没有焦点 返回fasle
-	  
-                     var text= document.querySelector("#inpt");
-		        text.focus()
-		          if( document.hasFocus()){
-		          	console.log("得到焦点");
-		             }else{
-		          	console.log("没有焦点");
-		          }
-       
-                       输出   得到焦点 
+ 
+		  focus()  主要是用于获取焦点，说白了，就是自动把光标放到此组件上面，无须用户再次操作
+
+		   document.hasFocus() 是否得到焦点，如果得到焦点 返回 true, 没有焦点 返回fasle
+
+			     var text= document.querySelector("#inpt");
+				text.focus()
+				  if( document.hasFocus()){
+					console.log("得到焦点");
+				     }else{
+					console.log("没有焦点");
+				  }
+
+			       输出   得到焦点 
                              
        
        
@@ -527,6 +528,7 @@ classList 属性
        
     兼容模式
     
+    
         
            IE给document添加了一个名为compatMode的属性,这个属性告诉开发人员浏览器采用了那种渲染模式,
 	  
@@ -540,9 +542,71 @@ classList 属性
 			  alert("我是混乱模式的浏览器");
 		      }
 
+
+
+插入标记
     
     
-    scrollIntoView()  滚动
+    
+	 innerHTML： 方法
+	  
+			   <div id="bt2"></div>
+
+			   var div= document.querySelector("#bt2");
+			   div.innerHTML="<p>66666</p>";
+
+			 浏览器输出  
+			   <div id="bt2">
+				<p>66666</p>
+			   </div>
+
+
+
+     outerHTML：方法      outerHTML与innerHTML差别看浏览器输出结果 就有区别了
+
+    	     <div id="bt2"></div>
+
+    	       var div= document.querySelector("#bt2");
+   	       div.outerHTML="<p>66666</p>";
+
+              浏览器输出
+                <p>66666</p>
+
+
+
+
+     insertAdjacentHTML() 新增的插入方法
+
+                	 beforebegin 在当前元素之前插入一个紧邻的同辈元素
+    	 
+			 afterbegin  在当前元素之前插入一个新的子元素或第一个子元素之前再插入新的元素
+
+			 beforeend  在当前元素之下插入一个新的子元素或在最后一个子元素之后再插入新的子元素
+
+			 afterend     在当前元素之后插入一个紧邻的同辈元素
+
+
+	       var div= document.querySelector("#bt2");
+	       
+	         作为前一个同辈元素插入
+   	       div.insertAdjacentHTML("beforebegin","<p>66666</p>")
+    
+                 作为 第一个子元素插入
+               div.insertAdjacentHTML("afterbegin","<p>66666</p>")  
+    
+                 作为最后一个子元素插入
+	       div.insertAdjacentHTML("beforeend","<p>66666</p>")
+	       
+	         作为后一个同辈元素插入
+	       div.insertAdjacentHTML("afterend","<p>66666</p>")
+	       
+	       
+	       
+	       
+    
+ scrollIntoView()  滚动
+    
+    
     
     
                 scrollIntoView(ture)元素上边框与视窗顶部齐平
