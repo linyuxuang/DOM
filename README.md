@@ -34,7 +34,8 @@ javascript—DOM基础
 	document.querySelector(".class")
 	document.querySelector("div")
             
-                  getElementsByTagName()等价于下面这个
+	    
+                  getElementsByTagName()等价于这个
           	  document.querySelectorAll()("div");
         
         1.getElementById()
@@ -418,9 +419,9 @@ javascript—DOM基础
 
 
         
-                      removeAttribute（）
+                        removeAttribute（）
                      
-                             div.removeAttribute("id")
+                        div.removeAttribute("id")
 			     
 			     
 
@@ -618,19 +619,19 @@ classList 属性
 		
 		
     
-            例子
-            	#slvFalse{
-                      position: absolute; 
-                      bottom: 0;
-                      position: absolute;
-			}
-		#div{
-			height: 800px;
-			background: #008000;
-			position: relative;
-			}
-			
-		</style>
+		    例子
+			#slvFalse{
+			      position: absolute; 
+			      bottom: 0;
+			      position: absolute;
+				}
+			#div{
+				height: 800px;
+				background: #008000;
+				position: relative;
+				}
+
+			</style>
 
 	     <button id="btn1">btn1</button>
 	     <button id="bt2">bun2</button>
