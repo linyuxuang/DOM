@@ -260,15 +260,16 @@ javascript—DOM基础
                        box.appendChild(text)  
                                    
         
-         (3).appendChild()方法
-              appendChild()方法将一个新节点·	添加到某个节点的子节点列表的末尾上;
-              var box = document.getElementById('box'); 
-              var p = document.createElement('p'); // 创建一个新元素节点<p>;
-              box.appendChild(p); // 把新元素节点<p>添加子节点末尾; 
-        
-                 
+            (3).appendChild()方法
+	 
+		      appendChild()方法将一个新节点·	添加到某个节点的子节点列表的末尾上;
+		      var box = document.getElementById('box'); 
+		      var p = document.createElement('p'); // 创建一个新元素节点<p>;
+		      box.appendChild(p); // 把新元素节点<p>添加子节点末尾; 
+
+
                    
-            (4).createTextNode()方法
+             (4).createTextNode()方法
                 该方法创建一个文本节点;
                 var text = document.createTextNode('段落'); 
                 p.appendChild(text); // 将文本节点添加到子节点末尾;  
@@ -414,8 +415,10 @@ javascript—DOM基础
                          console.log(div.getAttribute("title","mytitle"))
 
 删除特性  
+
+
         
-                    removeAttribute（）
+                      removeAttribute（）
                      
                              div.removeAttribute("id")
 			     
@@ -586,21 +589,21 @@ classList 属性
 			 afterend     在当前元素之后插入一个紧邻的同辈元素
 
 
-	       var div= document.querySelector("#bt2");
-	       
-	         作为前一个同辈元素插入
-   	       div.insertAdjacentHTML("beforebegin","<p>66666</p>")
-    
-                 作为 第一个子元素插入
-               div.insertAdjacentHTML("afterbegin","<p>66666</p>")  
-    
-                 作为最后一个子元素插入
-	       div.insertAdjacentHTML("beforeend","<p>66666</p>")
-	       
-	         作为后一个同辈元素插入
-	       div.insertAdjacentHTML("afterend","<p>66666</p>")
-	       
-	       
+			       var div= document.querySelector("#bt2");
+
+				 作为前一个同辈元素插入
+			       div.insertAdjacentHTML("beforebegin","<p>66666</p>")
+
+				 作为 第一个子元素插入
+			       div.insertAdjacentHTML("afterbegin","<p>66666</p>")  
+
+				 作为最后一个子元素插入
+			       div.insertAdjacentHTML("beforeend","<p>66666</p>")
+
+				 作为后一个同辈元素插入
+			       div.insertAdjacentHTML("afterend","<p>66666</p>")
+
+
 	       
 	       
     
@@ -612,8 +615,10 @@ classList 属性
                 scrollIntoView(ture)元素上边框与视窗顶部齐平
     
                 scrollIntoView(false)元素下边框与视窗底部齐平
+		
+		
     
-      例子
+            例子
             	#slvFalse{
                       position: absolute; 
                       bottom: 0;
