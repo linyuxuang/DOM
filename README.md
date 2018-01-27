@@ -542,15 +542,47 @@ classList 属性
 
     
     
+    scrollIntoView()  滚动
     
     
+                scrollIntoView(ture)元素上边框与视窗顶部齐平
     
+                scrollIntoView(false)元素下边框与视窗底部齐平
     
+      例子
+            	#slvFalse{
+                      position: absolute; 
+                      bottom: 0;
+                      position: absolute;
+			}
+		#div{
+			height: 800px;
+			background: #008000;
+			position: relative;
+			}
+			
+		</style>
+
+	     <button id="btn1">btn1</button>
+	     <button id="bt2">bun2</button>
     
+	      <div style="height: 200px;background: #008000;"></div>
+
+	      <div id="div">
+		  <span>scrollIntoView(ture)元素上边框与视窗顶部齐平  </span>
+		 <span  id="slvFalse" >scrollIntoView(false)元素下边框与视窗底部齐平</span>
+	      </div>
     
-    
-    
-    
+
+            document.querySelector("#btn1").onclick=function(){
+            
+                     document.querySelector("#div").scrollIntoView(true);
+            
+            }
+            document.querySelector("#bt2").onclick=function(){
+            	document.querySelector("#div").scrollIntoView(false);
+            }
+ 
     
        
        
