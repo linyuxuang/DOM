@@ -653,11 +653,11 @@ classList 属性
             	document.querySelector("#div").scrollIntoView(false);
             }
  
-    
-       
+    
+       
       
-   contains() 方法
-   
+   contains() 方法 ：查看一个节点是不是另一个节点的后代
+   
    
 		如果A元素包含B元素，则返回true，否则false。唯一不支持这个方法的是IE的死对头firefox。
 		不过火狐支持compareDocumentPosition() 方法,这是W3C制定的方法，标准浏览器都支持，
