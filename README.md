@@ -423,8 +423,13 @@ javascript—DOM基础
                      
                         div.removeAttribute("id")
 			     
-			     
-
+			     
+  判断一个元素尺寸，位置，
+  
+             这个方法不需要参数，返回一个left，right，top，bottom属性
+	     
+             getBoundingClientRect()			     
+               
        
  
  
