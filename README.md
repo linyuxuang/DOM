@@ -430,7 +430,9 @@ javascript—DOM基础
 	     
              getBoundingClientRect()			     
                
-       
+  获得滚动条的位置
+  
+     scrllLeft和scrollTop
  
  
  
